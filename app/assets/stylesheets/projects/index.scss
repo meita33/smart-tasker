@@ -76,21 +76,28 @@ a {
 
 
 
-.project-lists {
+.item-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.project-lists>.list {
+.item-lists>.list {
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;
 }
 
 
+.item-img-content {
+  position: relative;
+}
 
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
 
 .sold-out {
   position: absolute;
