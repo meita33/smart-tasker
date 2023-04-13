@@ -51,8 +51,7 @@ a {
 
 
 /* 商品一覧 */
-
-.project-contents {
+.project-titles {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
@@ -60,13 +59,13 @@ a {
   padding: 10vh 0;
 }
 
-.project-contents>.title {
+.project-titles>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
 }
 
-.project-contents>.subtitle {
+.project-titles>.subtitle {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
@@ -74,48 +73,44 @@ a {
   font-weight: bold;
 }
 
+.project-contents {
+  font-size: 5vh;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5vh 0;
+  background-color: burlywood;
+}
 
-
-.item-lists {
+.project-groups {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 5vw;
+  background-color: #f8f8f8;
 }
 
-.item-lists>.list {
+.project-groups>.title {
+  margin: 3vh;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 5vh;
+  background-color: navajowhite;
+}
+
+
+.project-groups>.list {
+  height: 1000px;
+  font-size: 3vh;
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  background-color: mediumslateblue;
 }
 
 
-.item-img-content {
-  position: relative;
-}
 
-.item-img {
-  width: 33vh;
-  height: 33vh;
-}
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
-
-.project--info {
+.project-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
