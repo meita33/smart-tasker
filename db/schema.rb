@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 2023_04_11_030749) do
 
   create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "title", null: false
+    t.string "project_title", null: false
     t.text "project_detail", null: false
-    t.integer "start_date", null: false
-    t.integer "end_date", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_projects_on_user_id"
