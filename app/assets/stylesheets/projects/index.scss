@@ -1,0 +1,138 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.title-contents {
+  width: 100vw;
+  background-image: image-url('furima-header01.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 8vh;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+.store-btn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+
+/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+
+
+
+
+/* 商品一覧 */
+.project-titles {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.project-titles>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.project-titles>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.project-contents {
+  font-size: 5vh;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5vh 0;
+  background-color: burlywood;
+}
+
+.project-groups {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5vw;
+  background-color: #f8f8f8;
+}
+
+.project-groups>.title {
+  margin: 3vh;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 5vh;
+  background-color: navajowhite;
+}
+
+
+.project-groups>.list {
+  height: 1000px;
+  font-size: 3vh;
+  width: 37vh;
+  padding: 1vw;
+  background-color: mediumslateblue;
+}
+
+
+
+.project-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.project-name {
+  font-size: 2.5vh;
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //商品一覧 */
