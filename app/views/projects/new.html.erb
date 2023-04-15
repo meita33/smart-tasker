@@ -1,11 +1,7 @@
 <%= render "shared/header" %>
-<div class="items-sell-contents">
-  <header class="items-sell-header">
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-
-  </header>
+<div class="project-new-contents">
   <div class="projects-main">
-    <h2 class="projects-title">タスクの情報を入力</h2>
+    <h2 class="projects-title">プロジェクトの情報を入力</h2>
     <%= form_with model: @project, local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -15,35 +11,37 @@
       <div>
         <div class=>
         開始日時　:　
-        <%= f.date_select :start_date, class:"projects-text", id:"item-name" %>
+        <%= f.date_select :start_date, class:"projects-text", use_month_numbers: true, prompt:'--',start_year: 1930,end_year: (Time.now.year - 5) %>
         </div>
       </div>
       <div>
         <div class=>
         終了日時　:　
-        <%= f.date_select :end_date, class:"projects-text", id:"item-name" %>
+        <%= f.date_select :end_date, class:"projects-text",  use_month_numbers: true, prompt:'--',start_year: 1930,end_year: (Time.now.year - 5) %>
         </div>
       </div>
 
+<%= f.collection_select(:section_id, Section.all, :id, :name, {}, {class:"select-box", id:"project-section"}) %>
+
       <div class="weight-bold-text">
-        タスク名
+        プロジェクト名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :project_title, class:"projects-text", id:"item-name", placeholder:"タスク名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :project_title, class:"projects-text", id:"item-name", placeholder:"プロジェクト名（必須 40文字まで)", maxlength:"40" %>
       <div class="projects-explain">
         <div class="weight-bold-text">
-          タスクの説明
+          プロジェクトの説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :project_detail, class:"projects-text", id:"item-info", placeholder:"タスクの説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :project_detail, class:"projects-text", id:"item-info", placeholder:"プロジェクトの説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
 
 
     <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "タスクの作成" , class:"sell-btn" %>
+    <div class="project-btn-contents">
+      <%= f.submit "プロジェクトの作成" , class:"project-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>

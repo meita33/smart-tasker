@@ -4,8 +4,9 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.references :user,             null: false, foreign_key: true
       t.string     :project_title,    null: false
       t.text       :project_detail,   null: false
-      t.date    :start_date,       null: false
-      t.date    :end_date,         null: false
+      t.date       :start_date,       null: false
+      t.date       :end_date,         null: false
+      t.integer    :section_id,       null: false
       t.timestamps
     end
   end

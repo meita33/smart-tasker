@@ -22,43 +22,40 @@
 
 
   <%# 商品一覧 %>
-  <div class='project-titles'>
-      <h2 class='title'>プロジェクト 一覧</h2>
-    <div class="subtitle" >
-      新規投稿商品
-    </div>
-  </div>
   <div class='project-contents'>
+    <div class='project-titles'>
+      <h2 class='title'>プロジェクト 一覧</h2>
+        <div class="subtitle" >
+          新規投稿商品
+        </div>
+    </div>
 
-    <ul class='project-groups'>
-      <li class='title'>
-        集配営業部
-      </li>
-      
-        <li class='list'>
-        t
-        </li>
-  
-    </ul>
+    <%#新規作成リンクをここに作成予定 %>
+    
+    <div class='project-groups'>
+      <div class='groups-title'>
+          外務
+      </div>
+      <div class='groups-detail'>
+        <% @projects.each do |project| %>
+          <span><%= project.section.name %>　<%= project.start_date %>　<%= project.project_title %>　</span>
+        <% end %>
+        <div>
+        f
+        </div>
+      </div>
+    </div>
 
-    <ul class='project-groups'>
-      <li class='title'>
-        ゆうパック
-      </li>
-      <li class='list'>
-      
-      </li>
-    </ul>
-
-    <ul class='project-groups'>
-      <li class='title'>
-        総務部
-      </li>
-      <li class='list'>
-      f
-      </li>
-    </ul>
-
+    <div class='project-groups'>
+      <div class='groups-title'>
+          内務
+      </div>
+      <div class='groups-detail'>
+        <% @projects.each do |project| %>
+          <span><%= project.section.name %>　<%= project.start_date %>　<%= project.project_title %>　</span>
+        <% end %>
+      </div>
+    </div>
   </div>
   <%# /商品一覧 %>
 
@@ -76,7 +73,7 @@
 
 </div>
 <%= link_to new_project_path, class: 'purchase-btn' do %>
-  <span class='purchase-btn-text'>タスク新規作成</span>
+  <span class='purchase-btn-text'>プロジェクト新規作成</span>
   <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
 
