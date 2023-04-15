@@ -51,64 +51,84 @@ a {
 
 
 /* 商品一覧 */
+.project-contents {
+  font-size: 5vh;
+  text-decoration: none;
+  align-items: center;
+  padding: 5vh 5vw;
+  background-color: rgb(134, 146, 144);
+}
+
 .project-titles {
-  background-color: #FFF;
+  background-color: rgb(134, 146, 144);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  padding: 5vh 0;
 }
 
 .project-titles>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px #a417a0;
+  background-color: #a1e7e3;
 }
 
 .project-titles>.subtitle {
-  font-size: 3vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
+  width: 140px;
+  background-color: #a1e7e3;
+  text-align: center;
+  // position: fixed;　⬅︎スクロールと同時に移動する記述
+  margin-top: 30px;
+  font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px #ff1e1e;
 }
 
-.project-contents {
-  font-size: 5vh;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: 5vh 0;
-  background-color: burlywood;
+.link{
+  display: block;
 }
-
 .project-groups {
-  width: 100vw;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 5vw;
+  padding: 8px 5vw;
+  margin: 3vh 0;
+  border: solid 3px #36c83d;
   background-color: #f8f8f8;
 }
 
-.project-groups>.title {
+.groups-title {
   margin: 3vh;
   font-weight: bold;
   text-decoration: none;
   font-size: 5vh;
-  background-color: navajowhite;
+  border: solid 3px #36c83d;
+  border-radius: 10px;
+  display:inline-block;
+  background-color: rgb(193, 255, 148);
 }
 
 
-.project-groups>.list {
-  height: 1000px;
+.groups-detail {
+  height: 210px;
   font-size: 3vh;
-  width: 37vh;
   padding: 1vw;
-  background-color: mediumslateblue;
+  border: solid 4px #36c83d;
+  border-radius: 10px;
+  overflow-y: scroll;
+  background-color: rgb(186, 178, 228);
 }
 
-
+.detail-area {
+  border: 2px solid rgb(75, 71, 71); /* 境界線を作成 */
+  border-radius: 10px;
+  padding: 10px; /* 行と境界線の間の余白を設定 */
+  margin-bottom: 10px; /* 行と行の間の余白を設定 */
+  background-color: rgb(252, 251, 255);
+}
 
 .project-info {
   background-color: #FFF;
