@@ -31,32 +31,26 @@
     </div>
 
     <%#新規作成リンクをここに作成予定 %>
-    
-    <div class='project-groups'>
-      <div class='groups-title'>
-          外務
-      </div>
-      <div class='groups-detail'>
-        <% @projects.each do |project| %>
-          <span><%= project.section.name %>　<%= project.start_date %>　<%= project.project_title %>　</span>
-        <% end %>
-        <div>
-        f
+
+
+    <% @projects.group_by(&:section).each do |section, projects| %>
+      <div class='project-groups'>
+        <div class='groups-title'>
+          <%= section.name %>
+        </div>
+        <div class='groups-detail'>
+          <% projects.each do |project| %>
+            <%= link_to project_path(project.id) do %>
+              <ul class='detail-area'>
+                <%= project.start_date %> 〜 <%= project.end_date %>　/　<%= project.project_title %>
+              </ul>
+            <% end %>
+          <% end %>
         </div>
       </div>
-    </div>
-
-    <div class='project-groups'>
-      <div class='groups-title'>
-          内務
-      </div>
-      <div class='groups-detail'>
-        <% @projects.each do |project| %>
-          <span><%= project.section.name %>　<%= project.start_date %>　<%= project.project_title %>　</span>
-        <% end %>
-      </div>
-    </div>
-  </div>
+    <% end %>
+ </div>
+  
   <%# /商品一覧 %>
 
 

@@ -17,6 +17,12 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    def set_item
+      @item = Item.find(params[:id])
+    end
+  end
+
   private
 
   def project_params
