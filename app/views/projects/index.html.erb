@@ -21,14 +21,17 @@
 
 
 
-  <%# 商品一覧 %>
+  <%# プロジェクト一覧 %>
   <div class='project-contents'>
     <div class='project-titles'>
       <h2 class='title'>プロジェクト 一覧</h2>
         <div class="subtitle" >
-          新規投稿商品
+          <%= link_to new_project_path, class: "link" do %>
+            プロジェクト新規作成
+          <% end %>
         </div>
     </div>
+
 
     <%#新規作成リンクをここに作成予定 %>
 
@@ -42,7 +45,11 @@
           <% projects.each do |project| %>
             <%= link_to project_path(project.id) do %>
               <ul class='detail-area'>
-                <%= project.start_date %> 〜 <%= project.end_date %>　/　<%= project.project_title %>
+                <%= project.start_date %> 〜 <%= project.end_date %>　【　<%= project.project_title %>　】　
+
+                <%= link_to "編集", edit_project_path(project), class: 'btn-edit' %>
+                <%= link_to "削除", project_path(project), method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn-delete' %>
+                
               </ul>
             <% end %>
           <% end %>
@@ -66,9 +73,6 @@
   <%# /完了項目　%>
 
 </div>
-<%= link_to new_project_path, class: 'purchase-btn' do %>
-  <span class='purchase-btn-text'>プロジェクト新規作成</span>
-  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-<% end %>
+
 
 <%= render "shared/footer" %>

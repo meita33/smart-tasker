@@ -60,28 +60,37 @@ a {
 }
 
 .project-titles {
-  background-color: #FFF;
+  background-color: rgb(134, 146, 144);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  padding: 5vh 0;
 }
 
 .project-titles>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px #a417a0;
+  background-color: #a1e7e3;
 }
 
 .project-titles>.subtitle {
-  font-size: 3vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
+  width: 140px;
+  background-color: #a1e7e3;
+  text-align: center;
+  // position: fixed;　⬅︎スクロールと同時に移動する記述
+  margin-top: 30px;
+  font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
+  border: solid 5px #ff1e1e;
 }
 
-
+.link{
+  display: block;
+}
 .project-groups {
   flex-wrap: wrap;
   justify-content: center;
