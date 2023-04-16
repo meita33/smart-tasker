@@ -18,9 +18,21 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    def set_item
-      @item = Item.find(params[:id])
+
+  end
+
+  def edit
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to root_path
+    else
+      render :edit
     end
+  end
+
+  def destroy
   end
 
   private

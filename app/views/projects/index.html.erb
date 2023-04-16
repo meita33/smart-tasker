@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <div class='main'>
 
   <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
@@ -20,7 +21,6 @@
   <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
 
 
-
   <%# プロジェクト一覧 %>
   <div class='project-contents'>
     <div class='project-titles'>
@@ -32,10 +32,6 @@
         </div>
     </div>
 
-
-    <%#新規作成リンクをここに作成予定 %>
-
-
     <% @projects.group_by(&:section).each do |section, projects| %>
       <div class='project-groups'>
         <div class='groups-title'>
@@ -46,10 +42,10 @@
             <%= link_to project_path(project.id) do %>
               <ul class='detail-area'>
                 <%= project.start_date %> 〜 <%= project.end_date %>　【　<%= project.project_title %>　】　
-
-                <%= link_to "編集", edit_project_path(project), class: 'btn-edit' %>
-                <%= link_to "削除", project_path(project), method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn-delete' %>
-                
+                <div class='d-flex justify-content-end align-items-center'>
+                  <%= link_to "編集", edit_project_path(project), class: 'btn-primary-custom mr-3' %>
+                  <%= link_to "削除", project_path(project), method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn-delete-custom' %>
+                </div>
               </ul>
             <% end %>
           <% end %>
@@ -58,7 +54,7 @@
     <% end %>
  </div>
   
-  <%# /商品一覧 %>
+  <%# /プロジェクト一覧 %>
 
 
   <%# 完了項目　%>
