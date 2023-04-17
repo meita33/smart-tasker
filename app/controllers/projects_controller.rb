@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
     @projects = Project.includes(:user)
   end
 
+
+
   def new
     @project = Project.new
   end
@@ -33,6 +35,11 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    if @project.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
