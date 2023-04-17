@@ -93,7 +93,6 @@ a {
 }
 .project-groups {
   flex-wrap: wrap;
-  justify-content: center;
   padding: 8px 5vw;
   margin: 3vh 0;
   border: solid 3px #36c83d;
@@ -111,7 +110,6 @@ a {
   background-color: rgb(193, 255, 148);
 }
 
-
 .groups-detail {
   height: 210px;
   font-size: 3vh;
@@ -123,12 +121,54 @@ a {
 }
 
 .detail-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid rgb(75, 71, 71); /* 境界線を作成 */
   border-radius: 10px;
   padding: 10px; /* 行と境界線の間の余白を設定 */
   margin-bottom: 10px; /* 行と行の間の余白を設定 */
   background-color: rgb(252, 251, 255);
 }
+
+.btn-primary-custom,
+.btn-delete-custom {
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-delete-custom {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-primary-custom:hover,
+.btn-delete-custom:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+
+
+
+
+
+
+
 
 .project-info {
   background-color: #FFF;

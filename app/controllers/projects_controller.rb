@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
     @projects = Project.includes(:user)
   end
 
+
+
   def new
     @project = Project.new
   end
@@ -18,8 +20,25 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    def set_item
-      @item = Item.find(params[:id])
+
+  end
+
+  def edit
+  end
+
+  def update
+    if @project.update(project_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @project.destroy
+      redirect_to root_path
+    else
+      render :show
     end
   end
 
