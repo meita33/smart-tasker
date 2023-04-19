@@ -4,5 +4,6 @@ class Project < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :section
+  belongs_to_active_hash :timelabel
 
 end
