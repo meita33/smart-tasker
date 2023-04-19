@@ -1,1 +1,36 @@
-詳細画面（　タスク画面へ移りたいので、この詳細画面は作成しないかも　）
+<%= render "shared/header" %>
+
+<%# 商品の概要 %>
+<div class='project-contents'>
+    <div class='project-titles'>
+      <h2 class='title'>プロジェクト 詳細</h2>
+        <div class="subtitle" >
+          <%= link_to new_project_path, class: "link" do %>
+            タスク 新規作成
+          <% end %>
+        </div>
+    </div>
+
+      <div class='project-groups'>
+        <div class='groups-title'>
+          <%= @project.project_title %>
+        </div>
+        <div class='groups-detail'>
+        
+          <% @projects.each do |project| %>
+            <%= link_to project_path(project.id) do %>
+              <ul class='detail-area'>
+                <%= project.start_date %> 〜 <%= project.end_date %>　【　<%= project.project_title %>　】　
+                
+              </ul>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+  </div>
+
+    
+</div>
+
+<%= render "shared/footer" %>
