@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-
+    @projects = Project.includes(:user)
   end
 
   def edit
